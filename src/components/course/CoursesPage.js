@@ -16,6 +16,7 @@ class CoursesPage extends React.Component {
       this.onClickSave = this.onClickSave.bind(this);
   }
 
+// Child functions
   onTitleChange(event) {
     const course = this.state.course;
     course.title = event.target.value;
@@ -30,6 +31,7 @@ class CoursesPage extends React.Component {
     return <div key={index}>{course.title}</div>;
   }
 
+// renders child components and possibly some additional markup
   render() {
     return (
       <div>
@@ -50,11 +52,13 @@ class CoursesPage extends React.Component {
   }
 }
 
+// Proptypes with validations
 CoursesPage.propTypes = {
   courses: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired
 };
 
+// Redux, Connect, and related functions
 const mapStateToProps = (state, ownProps) => {
   return {
     courses: state.courses
