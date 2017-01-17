@@ -4,7 +4,7 @@ import courses from './courseReducer';
 
 const rootReducer = combineReducers({
   // courses: courses // shorthand property name, ES6 feature.
-  courses,
+  courses
   // ajaxCallsInProgress
 });
 
