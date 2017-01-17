@@ -17,9 +17,18 @@ class TimelapsePage extends React.Component {
         endDate={new Date('2016-04-01')}
         numDays={100}
         values={[
-          { date: '2016-01-01', count: 1 },
-          { date: '2016-01-22', count: 4 },
-          { date: '2016-01-30', count: 2 }
+          { date: '2016-01-01', count: 0 },
+          { date: '2016-01-02', count: 1 },
+          { date: '2016-01-03', count: 2 },
+          { date: '2016-01-05', count: 3 },
+          { date: '2016-01-06', count: 4 },
+          { date: '2016-01-07', count: 5 },
+          { date: '2016-01-08', count: 6 },
+          { date: '2016-01-09', count: 7 },
+          { date: '2016-01-10', count: 8 },
+          { date: '2016-01-11', count: 9 },
+          { date: '2016-01-12', count: 10 },          
+
         ]}
         classForValue={(value) => {
           if (!value) {
