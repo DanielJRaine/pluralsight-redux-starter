@@ -14,7 +14,18 @@ nav {
   padding-top: 20px;
 }
 
-.react-calendar-heatmap .color-scale-1 { fill: #d6e685; }
-.react-calendar-heatmap .color-scale-2 { fill: #8cc665; }
-.react-calendar-heatmap .color-scale-3 { fill: #44a340; }
-.react-calendar-heatmap .color-scale-4 { fill: #1e6823; }
+
+
+
+
+.react-calendar-heatmap .color-scale-0 { fill: #404040}
+.react-calendar-heatmap .color-scale-1 { fill: #bd0026}
+.react-calendar-heatmap .color-scale-2 { fill: #f03b20 }
+.react-calendar-heatmap .color-scale-3 { fill: #fd8d3c }
+.react-calendar-heatmap .color-scale-4 { fill: #fecc5c }
+.react-calendar-heatmap .color-scale-5 { fill: #fef0d9 }
+.react-calendar-heatmap .color-scale-6 { fill: #d6e685; }
+.react-calendar-heatmap .color-scale-7 { fill: #8cc665; }
+.react-calendar-heatmap .color-scale-8 { fill: #44a340; }
+.react-calendar-heatmap .color-scale-9 { fill: #1e6823; }
+.react-calendar-heatmap .color-scale-10 { fill: #004F00; }
