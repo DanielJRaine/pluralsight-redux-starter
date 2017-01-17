@@ -9,7 +9,7 @@ export function loadCoursesSuccess(courses) {
 
 export function loadCourses() {
   return function(dispatch) {
-    // dispatch(beginAjaxCall());
+    dispatch(beginAjaxCall());
     return courseApi.getAllCourses().then(courses => {
       dispatch(loadCoursesSuccess(courses));
     }).catch(error => {
