@@ -12,13 +12,13 @@ class CalendarHeatmap extends React.Component {
     super(props);
 
     this.state = {
-      valueCache: this.getValueCache(props.values),
+      valueCache: this.getValueCache(props.values)
     };
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      valueCache: this.getValueCache(nextProps.values),
+      valueCache: this.getValueCache(nextProps.values)
     });
   }
 
@@ -61,11 +61,12 @@ class CalendarHeatmap extends React.Component {
   }
 
   getWeekWidth() {
-    return DAYS_IN_WEEK * this.getSquareSizeWithGutter();
+    // return DAYS_IN_WEEK * this.getSquareSizeWithGutter();
+    return DAYS_IN_WEEK * this.getSquareSizeWithGutter() * this.getWeekCount();
   }
 
   getWidth() {
-    return (this.getWeekCount() * this.getSquareSizeWithGutter()) - this.props.gutterSize;
+     return (this.getWeekCount() * this.getSquareSizeWithGutter()) - this.props.gutterSize;
   }
 
   getHeight() {
@@ -80,7 +81,7 @@ class CalendarHeatmap extends React.Component {
         value,
         className: this.props.classForValue(value),
         title: this.props.titleForValue ? this.props.titleForValue(value) : null,
-        tooltipDataAttrs: this.getTooltipDataAttrsForValue(value),
+        tooltipDataAttrs: this.getTooltipDataAttrsForValue(value)
       };
       return memo;
     }, {});
@@ -162,13 +163,13 @@ class CalendarHeatmap extends React.Component {
     if (this.props.horizontal) {
       return [
         weekIndex * this.getSquareSizeWithGutter(),
-        this.getMonthLabelSize() - MONTH_LABEL_GUTTER_SIZE,
+        this.getMonthLabelSize() - MONTH_LABEL_GUTTER_SIZE
       ];
     }
     const verticalOffset = -2;
     return [
       0,
-      ((weekIndex + 1) * this.getSquareSizeWithGutter()) + verticalOffset,
+      ((weekIndex + 1) * this.getSquareSizeWithGutter()) + verticalOffset
     ];
   }
 
@@ -201,7 +202,7 @@ class CalendarHeatmap extends React.Component {
 
   renderWeek(weekIndex) {
     return (
-      <g key={weekIndex} transform={this.getTransformForWeek(weekIndex)}>
+      <g key={weekIndex} transform={this.getTransformForWeek(weekIndex)} display="block">
         {range(DAYS_IN_WEEK).map(dayIndex => this.renderSquare(dayIndex, (weekIndex * DAYS_IN_WEEK) + dayIndex))}
       </g>
     );
@@ -251,7 +252,7 @@ class CalendarHeatmap extends React.Component {
 CalendarHeatmap.propTypes = {
   values: PropTypes.arrayOf(             // array of objects with date and arbitrary metadata
     PropTypes.shape({
-      date: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]).isRequired,
+      date: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]).isRequired
     }).isRequired
   ).isRequired,
   numDays: PropTypes.number,             // number of days back from endDate to show
@@ -263,7 +264,7 @@ CalendarHeatmap.propTypes = {
   tooltipDataAttrs: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),    // data attributes to add to square for setting 3rd party tooltips, e.g. { 'data-toggle': 'tooltip' } for bootstrap tooltips
   titleForValue: PropTypes.func,         // function which returns title text for value
   classForValue: PropTypes.func,         // function which returns html class for value
-  onClick: PropTypes.func,               // callback function when a square is clicked
+  onClick: PropTypes.func               // callback function when a square is clicked
 };
 
 CalendarHeatmap.defaultProps = {
@@ -273,7 +274,7 @@ CalendarHeatmap.defaultProps = {
   horizontal: true,
   showMonthLabels: true,
   showOutOfRangeDays: false,
-  classForValue: value => (value ? 'color-filled' : 'color-empty'),
+  classForValue: value => (value ? 'color-filled' : 'color-empty')
 };
 
 export default CalendarHeatmap;

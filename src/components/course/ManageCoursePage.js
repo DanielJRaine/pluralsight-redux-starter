@@ -24,13 +24,13 @@ ManageCoursePage.propTypes = {
   //myProp: PropTypes.string.isRequired
   course: PropTypes.object.isRequired,
   authors: PropTypes.array.isRequired
-}
+};
 
 const mapStateToProps = (state, ownProps) => {
   // return {
   //   state: state
   // };
-  let course = {id: '', watchHref: '', title: '', authorId: '', length: '', category: ''}
+  let course = {id: '', watchHref: '', title: '', authorId: '', length: '', category: ''};
 
   const authorsFormattedForDropdown = state.authors.map(author => {
     return {
@@ -42,13 +42,13 @@ const mapStateToProps = (state, ownProps) => {
   return {
     course: course,
     authors: authorsFormattedForDropdown
-  }
-}
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
     actions: bindActionCreators(courseActions, dispatch)
   };
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ManageCoursePage);
