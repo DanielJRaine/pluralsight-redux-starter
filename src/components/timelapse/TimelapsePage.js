@@ -1,4 +1,15 @@
+import React from 'react';
+import {Link} from 'react-router';
 import CalendarHeatmap from 'react-calendar-heatmap';
+
+class TimelapsePage extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+
+  }
+
+
+}
 
 <CalendarHeatmap
   endDate={new Date('2016-04-01')}
@@ -6,7 +17,7 @@ import CalendarHeatmap from 'react-calendar-heatmap';
   values={[
     { date: '2016-01-01' },
     { date: '2016-01-22' },
-    { date: '2016-01-30' },
+    { date: '2016-01-30' }
   ]}
    classForValue={(value) => {
     if (!value) {
