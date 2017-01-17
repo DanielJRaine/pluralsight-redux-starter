@@ -128,7 +128,7 @@ class CalendarHeatmap extends React.Component {
     if (this.props.horizontal) {
       return `translate(${weekIndex * this.getSquareSizeWithGutter()}, 0)`;
     }
-    return `translate(0, ${weekIndex * this.getSquareSizeWithGutter()})`;
+    return `translate(${weekIndex * DAYS_IN_WEEK * this.getSquareSizeWithGutter()})`;
   }
 
   getTransformForMonthLabels() {
@@ -202,7 +202,7 @@ class CalendarHeatmap extends React.Component {
 
   renderWeek(weekIndex) {
     return (
-      <g key={weekIndex} transform={this.getTransformForWeek(weekIndex)} display="block">
+      <g key={weekIndex} transform={this.getTransformForWeek(weekIndex)}>
         {range(DAYS_IN_WEEK).map(dayIndex => this.renderSquare(dayIndex, (weekIndex * DAYS_IN_WEEK) + dayIndex))}
       </g>
     );
