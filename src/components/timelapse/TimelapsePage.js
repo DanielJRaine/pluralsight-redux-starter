@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import * as timelapseActions from '../../actions/timelapseActions';
 import {Link} from 'react-router';
 import CalendarHeatmap from 'react-calendar-heatmap';
 
@@ -16,9 +17,9 @@ class TimelapsePage extends React.Component {
         endDate={new Date('2016-04-01')}
         numDays={100}
         values={[
-          { date: '2016-01-01' },
-          { date: '2016-01-22' },
-          { date: '2016-01-30' }
+          { date: '2016-01-01', count: 1 },
+          { date: '2016-01-22', count: 4 },
+          { date: '2016-01-30', count: 2 }
         ]}
         classForValue={(value) => {
           if (!value) {
@@ -27,7 +28,7 @@ class TimelapsePage extends React.Component {
           return `color-scale-${value.count}`;
         }}
       />
-    )
+    );
   }
 }
 
