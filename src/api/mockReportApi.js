@@ -1,4 +1,4 @@
-const reports = [
+const reports =
   {
 "reportTitle": "ThingSpace API Automation",
 "stats": {
@@ -867,8 +867,7 @@ const reports = [
 }
 ],
 "copyrightYear": 2017
-}
-];
+};
 
 class reportApi {
   static getAllReports() {

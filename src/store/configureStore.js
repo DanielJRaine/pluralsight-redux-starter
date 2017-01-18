@@ -5,13 +5,13 @@ import thunk from 'redux-thunk';
 import helper from './../helpers/RestHelper.js'
 
 export default function configureStore(initialState) {
-  let reports = [];
+  // let reports = [];
   
-  helper.get("api/reports")
-  .then((data) => {
-    reports = data;
-    triggerListeners();
-  })
+  // helper.get("api/reports")
+  // .then((data) => {
+  //   reports = data;
+  //   triggerListeners();
+  // })
 
   return createStore(
     rootReducer,
