@@ -1,4 +1,4 @@
-const tests = [
+const reports = [
   {
 "reportTitle": "ThingSpace API Automation",
 "stats": {
@@ -870,14 +870,14 @@ const tests = [
 }
 ];
 
-class timelapseApi {
-  static getAllTests() {
+class reportApi {
+  static getAllReports() {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(Object.assign([], tests));
+        resolve(Object.assign([], reports));
       });
     });
   }
 }
 
-export default timelapseApi;
+export default reportApi;
