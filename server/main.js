@@ -33,7 +33,7 @@ app.set('view engine', 'html');
 app.get('/', (req, res) => {
   res.render('./../src/index.html',{});
 })
-.listen(7000);
+.listen(8080);
 
 app.use(parser.json());
 app.use(parser.urlencoded({extended: false}));
