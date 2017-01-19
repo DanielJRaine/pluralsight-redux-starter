@@ -237,10 +237,8 @@ class CalendarHeatmap extends React.Component {
 
   render() {
     return (
-      <div>
-      <p>
+      <div style={{width: "100%"}}>
         {this.props.label}
-      </p>
       <a href={this.props.href}>
       <svg
         style={{display: "inline"}}

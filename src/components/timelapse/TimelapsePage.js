@@ -50,6 +50,7 @@ class TimelapsePage extends React.Component {
           }}
         />
         <CalendarHeatmap
+          href={"https://s3.amazonaws.com/verizoniot/vzthingspace/staging/v2/2017-01-05/thingspacereport.html"}
           label={"NPDISC-5910"}
           horizontal={false}
           endDate={new Date('2016-01-12')}
@@ -75,6 +76,7 @@ class TimelapsePage extends React.Component {
           }}
         />
         <CalendarHeatmap
+          href={"https://s3.amazonaws.com/verizoniot/vzthingspace/staging/v2/2017-01-05/thingspacereport.html"}        
           label={"PSM API Smoke Test - Login"}
           horizontal={false}
           endDate={new Date('2016-01-12')}
@@ -100,6 +102,7 @@ class TimelapsePage extends React.Component {
           }}
         />
         <CalendarHeatmap
+          href={"https://s3.amazonaws.com/verizoniot/vzthingspace/staging/v2/2017-01-05/thingspacereport.html"}        
           label={"Thingspace.com API Smoke Test - Devices"}
           horizontal={false}
           endDate={new Date('2016-01-12')}
@@ -125,6 +128,7 @@ class TimelapsePage extends React.Component {
           }}
         />
         <CalendarHeatmap
+          href={"https://s3.amazonaws.com/verizoniot/vzthingspace/staging/v2/2017-01-05/thingspacereport.html"}        
           label={"Thingspace.com UI Smoke Test - Login"}
           horizontal={false}
           endDate={new Date('2016-01-12')}
