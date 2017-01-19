@@ -24,6 +24,108 @@ class TimelapsePage extends React.Component {
       <div>
         <h1>{this.props.reports.reportTitle}</h1>
         <CalendarHeatmap
+          href={"https://s3.amazonaws.com/verizoniot/vzthingspace/staging/v2/2017-01-05/thingspacereport.html"}
+          label={"NPDISC-2414"}
+          horizontal={false}
+          endDate={new Date('2016-01-12')}
+          numDays={numDays}
+          values={[
+            { date: '2016-01-01', count: 0 },
+            { date: '2016-01-02', count: 1 },
+            { date: '2016-01-03', count: 2 },
+            { date: '2016-01-04', count: 3 },
+            { date: '2016-01-05', count: 4 },
+            { date: '2016-01-06', count: 5 },
+            { date: '2016-01-07', count: 6 },
+            { date: '2016-01-08', count: 7 },
+            { date: '2016-01-09', count: 8 },
+            { date: '2016-01-10', count: 9 },
+            { date: '2016-01-11', count: 10 }      
+          ]}
+          classForValue={(value) => {
+            if (!value) {
+              return 'color-empty';
+            }
+            return `color-scale-${value.count}`;
+          }}
+        />
+        <CalendarHeatmap
+          label={"NPDISC-5910"}
+          horizontal={false}
+          endDate={new Date('2016-01-12')}
+          numDays={numDays}
+          values={[
+            { date: '2016-01-01', count: 0 },
+            { date: '2016-01-02', count: 1 },
+            { date: '2016-01-03', count: 2 },
+            { date: '2016-01-04', count: 3 },
+            { date: '2016-01-05', count: 4 },
+            { date: '2016-01-06', count: 5 },
+            { date: '2016-01-07', count: 6 },
+            { date: '2016-01-08', count: 7 },
+            { date: '2016-01-09', count: 8 },
+            { date: '2016-01-10', count: 9 },
+            { date: '2016-01-11', count: 10 }      
+          ]}
+          classForValue={(value) => {
+            if (!value) {
+              return 'color-empty';
+            }
+            return `color-scale-${value.count}`;
+          }}
+        />
+        <CalendarHeatmap
+          label={"PSM API Smoke Test - Login"}
+          horizontal={false}
+          endDate={new Date('2016-01-12')}
+          numDays={numDays}
+          values={[
+            { date: '2016-01-01', count: 0 },
+            { date: '2016-01-02', count: 1 },
+            { date: '2016-01-03', count: 2 },
+            { date: '2016-01-04', count: 3 },
+            { date: '2016-01-05', count: 4 },
+            { date: '2016-01-06', count: 5 },
+            { date: '2016-01-07', count: 6 },
+            { date: '2016-01-08', count: 7 },
+            { date: '2016-01-09', count: 8 },
+            { date: '2016-01-10', count: 9 },
+            { date: '2016-01-11', count: 10 }      
+          ]}
+          classForValue={(value) => {
+            if (!value) {
+              return 'color-empty';
+            }
+            return `color-scale-${value.count}`;
+          }}
+        />
+        <CalendarHeatmap
+          label={"Thingspace.com API Smoke Test - Devices"}
+          horizontal={false}
+          endDate={new Date('2016-01-12')}
+          numDays={numDays}
+          values={[
+            { date: '2016-01-01', count: 0 },
+            { date: '2016-01-02', count: 1 },
+            { date: '2016-01-03', count: 2 },
+            { date: '2016-01-04', count: 3 },
+            { date: '2016-01-05', count: 4 },
+            { date: '2016-01-06', count: 5 },
+            { date: '2016-01-07', count: 6 },
+            { date: '2016-01-08', count: 7 },
+            { date: '2016-01-09', count: 8 },
+            { date: '2016-01-10', count: 9 },
+            { date: '2016-01-11', count: 10 }      
+          ]}
+          classForValue={(value) => {
+            if (!value) {
+              return 'color-empty';
+            }
+            return `color-scale-${value.count}`;
+          }}
+        />
+        <CalendarHeatmap
+          label={"Thingspace.com UI Smoke Test - Login"}
           horizontal={false}
           endDate={new Date('2016-01-12')}
           numDays={numDays}

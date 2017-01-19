@@ -70,7 +70,8 @@ class CalendarHeatmap extends React.Component {
   }
 
   getHeight() {
-    return this.getWeekWidth() + (this.getMonthLabelSize() - this.props.gutterSize);
+    // return this.getWeekWidth() + (this.getMonthLabelSize() - this.props.gutterSize);
+    return this.getWeekWidth() + (this.getMonthLabelSize() - this.props.gutterSize);    
   }
 
   getValueCache(values) {
@@ -147,9 +148,11 @@ class CalendarHeatmap extends React.Component {
 
   getViewBox() {
     if (this.props.horizontal) {
-      return `0 0 ${this.getWidth()} ${this.getHeight()}`;
+      // return `0 0 ${this.getWidth()} ${this.getHeight()}`;
+      return `0 0 ${this.getWidth()} 0`;      
     }
-    return `0 0 ${this.getHeight()} ${this.getWidth()}`;
+    // return `0 0 ${this.getHeight()} ${this.getWidth()}`;
+    return `0 0 ${this.getHeight()} ${this.getWidth()}`;    
   }
 
   getSquareCoordinates(dayIndex) {
@@ -234,9 +237,15 @@ class CalendarHeatmap extends React.Component {
 
   render() {
     return (
+      <div>
+      <p>
+        {this.props.label}
+      </p>
+      <a href={this.props.href}>
       <svg
+        style={{display: "inline"}}
         className="react-calendar-heatmap"
-        viewBox={this.getViewBox()}
+        viewBox={`0 0 ${this.getHeight()} 10`}
       >
         <g transform={this.getTransformForMonthLabels()}>
           {this.renderMonthLabels()}
@@ -245,11 +254,15 @@ class CalendarHeatmap extends React.Component {
           {this.renderAllWeeks()}
         </g>
       </svg>
+      </a>
+      </div>
     );
   }
 }
 
 CalendarHeatmap.propTypes = {
+  label: PropTypes.string,
+  href: PropTypes.string,
   values: PropTypes.arrayOf(             // array of objects with date and arbitrary metadata
     PropTypes.shape({
       date: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]).isRequired
@@ -268,11 +281,12 @@ CalendarHeatmap.propTypes = {
 };
 
 CalendarHeatmap.defaultProps = {
+  label: "",
   numDays: 200,
   endDate: new Date(),
   gutterSize: 1,
   horizontal: true,
-  showMonthLabels: true,
+  showMonthLabels: false,
   showOutOfRangeDays: false,
   classForValue: value => (value ? 'color-filled' : 'color-empty')
 };
