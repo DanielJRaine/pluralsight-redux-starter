@@ -1,5 +1,5 @@
 // this handles the App template used on every page
-import React, {PropTypes} from 'react';
+import React from 'react';
 import Header from './common/Header';
 
 class App extends React.Component {
@@ -12,9 +12,5 @@ class App extends React.Component {
     );
   }
 }
-
-App.PropTypes = {
-  children: PropTypes.object.isRequired
-};
 
 export default App;

@@ -1,5 +1,5 @@
 'use strict';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as reportActions from '../../actions/reportActions';
@@ -28,7 +28,7 @@ class TimelapsePage extends React.Component {
           label={"NPDISC-2414"}
           horizontal={false}
           endDate={new Date('2016-01-12')}
-          numDays={numDays}
+          numDays={30}
           values={[
             { date: '2016-01-01', count: 0 },
             { date: '2016-01-02', count: 1 },

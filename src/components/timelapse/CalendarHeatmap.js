@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import range from 'lodash.range';
 import reduce from 'lodash.reduce';
 import { DAYS_IN_WEEK, MILLISECONDS_IN_ONE_DAY, MONTH_LABELS } from './constants';
@@ -258,25 +258,25 @@ class CalendarHeatmap extends React.Component {
   }
 }
 
-CalendarHeatmap.propTypes = {
-  label: PropTypes.string,
-  href: PropTypes.string,
-  values: PropTypes.arrayOf(             // array of objects with date and arbitrary metadata
-    PropTypes.shape({
-      date: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]).isRequired
-    }).isRequired
-  ).isRequired,
-  numDays: PropTypes.number,             // number of days back from endDate to show
-  endDate: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]),  // end of date range
-  gutterSize: PropTypes.number,          // size of space between squares
-  horizontal: PropTypes.bool,            // whether to orient horizontally or vertically
-  showMonthLabels: PropTypes.bool,       // whether to show month labels
-  showOutOfRangeDays: PropTypes.bool,    // whether to render squares for extra days in week after endDate, and before start date
-  tooltipDataAttrs: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),    // data attributes to add to square for setting 3rd party tooltips, e.g. { 'data-toggle': 'tooltip' } for bootstrap tooltips
-  titleForValue: PropTypes.func,         // function which returns title text for value
-  classForValue: PropTypes.func,         // function which returns html class for value
-  onClick: PropTypes.func               // callback function when a square is clicked
-};
+// CalendarHeatmap.propTypes = {
+//   label: PropTypes.string,
+//   href: PropTypes.string,
+//   values: PropTypes.arrayOf(             // array of objects with date and arbitrary metadata
+//     PropTypes.shape({
+//       date: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]).isRequired
+//     }).isRequired
+//   ).isRequired,
+//   numDays: PropTypes.number,             // number of days back from endDate to show
+//   endDate: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]),  // end of date range
+//   gutterSize: PropTypes.number,          // size of space between squares
+//   horizontal: PropTypes.bool,            // whether to orient horizontally or vertically
+//   showMonthLabels: PropTypes.bool,       // whether to show month labels
+//   showOutOfRangeDays: PropTypes.bool,    // whether to render squares for extra days in week after endDate, and before start date
+//   tooltipDataAttrs: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),    // data attributes to add to square for setting 3rd party tooltips, e.g. { 'data-toggle': 'tooltip' } for bootstrap tooltips
+//   titleForValue: PropTypes.func,         // function which returns title text for value
+//   classForValue: PropTypes.func,         // function which returns html class for value
+//   onClick: PropTypes.func               // callback function when a square is clicked
+// };
 
 CalendarHeatmap.defaultProps = {
   label: "",
